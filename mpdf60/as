@@ -1,0 +1,21 @@
+include('inc/header-front.php'); 
+
+$pg = '';
+echo 'YESEEEEEE'; 
+/*
+ * PHP Code untuk mendapatkan halaman view masing masing tabel
+ */
+if ( !isset($_GET['pg']) ) 
+{
+	echo 'sdfsdfsdfsdfsdf';
+	//include('page/produk.php');
+} 
+else 
+{   
+	$mod = $_GET['mod'];
+	$pg  = $_GET['pg'];
+	
+	include  $mod."/". $pg . ".php";
+}
+
+include('inc/footer-front.php');
